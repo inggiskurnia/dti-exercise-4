@@ -9,7 +9,7 @@ public class RandomGuess {
         //guess number
         Scanner myObj = new Scanner(System.in);
         boolean start = true;
-        int maxTry = 5;
+        int maxTry = 2;
         int tryCount = 0;
 
         while(start){
@@ -18,7 +18,7 @@ public class RandomGuess {
 
             if (tryCount == maxTry) {
                 System.out.println("The random number is : " + random);
-                break;
+                start = false;
             }
 
             if (guess > random) {
